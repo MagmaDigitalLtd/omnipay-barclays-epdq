@@ -76,6 +76,7 @@ class EssentialGatewayTest extends GatewayTestCase
             'PAYID'         => '29575472',
             'NCERROR'       => '0',
             'BRAND'         => 'VISA',
+            'testKey'       => 'fake-value',
             'SHASIGN'       => '425443996F67C928CDBF950DF9AD5E27EA1F330B'
         ));
 
@@ -88,6 +89,7 @@ class EssentialGatewayTest extends GatewayTestCase
 
         $this->assertSame(5, $response->getStatusCode());
         $this->assertSame("Authorised", $response->getMessage());
+	$this->assertArrayHasKey('testKey', $response->getData());
     }
 
     /**
