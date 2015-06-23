@@ -110,6 +110,16 @@ class EssentialPurchaseRequest extends AbstractRequest
         return $this->setParameter('callbackMethod', $value);
     }
 
+	public function setECI($value)
+	{
+		return $this->setParameter('ECI', $value);
+	}
+
+	public function getECI()
+	{
+		return $this->getParameter('ECI');
+	}
+
     /**
      * Get the page layout configuration
      *
@@ -174,6 +184,7 @@ class EssentialPurchaseRequest extends AbstractRequest
         $data['CANCELURL']      = $this->getCancelUrl();
         $data['DECLINEURL']     = $this->getDeclineUrl();
         $data['EXCEPTIONURL']   = $this->getExceptionUrl();
+        $data['ECI']            = $this->getECI();
 
         $card = $this->getCard();
         if ($card) {
