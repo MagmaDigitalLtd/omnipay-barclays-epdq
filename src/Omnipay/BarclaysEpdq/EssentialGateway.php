@@ -96,15 +96,35 @@ class EssentialGateway extends AbstractGateway
         return $this->getParameter('returnUrl');
     }
 
+	public function setDeclineUrl($value)
+	{
+		return $this->setParameter('declineUrl', $value);
+	}
+
     public function getDeclineUrl()
     {
         return $this->getParameter('declineUrl');
     }
 
+	public function setExceptionUrl($value)
+	{
+		return $this->setParameter('exceptionUrl', $value);
+	}
+
     public function getExceptionUrl()
     {
         return $this->getParameter('exceptionUrl');
     }
+
+	public function setCancelUrl($value)
+	{
+		return $this->setParameter('cancelUrl', $value);
+	}
+
+	public function getCancelUrl()
+	{
+		return $this->getParameter('cancelUrl');
+	}
 
     public function setReturnUrl($value)
     {
