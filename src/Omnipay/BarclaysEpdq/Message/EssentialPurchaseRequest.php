@@ -251,6 +251,7 @@ class EssentialPurchaseRequest extends AbstractRequest
             $data['BUTTONTXTCOLOR'] = $pageLayout->getButtonTextColor();
             $data['FONTTYPE'] = $pageLayout->getFontType();
             $data['LOGO'] = $pageLayout->getLogo();
+            $data['PMLISTTYPE'] = $pageLayout->getPaymentMethodListType();
         }
 
         $delivery = $this->getDelivery();
