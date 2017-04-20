@@ -176,4 +176,14 @@ class PageLayout
     {
         $this->setParameter('logo', $value);
     }
+
+    public function getPaymentMethodListType()
+    {
+        return $this->getParameter('pmListType');
+    }
+
+    public function setPaymentMethodListType($value)
+    {
+        $this->setParameter('pmListType', $value);
+    }
 }

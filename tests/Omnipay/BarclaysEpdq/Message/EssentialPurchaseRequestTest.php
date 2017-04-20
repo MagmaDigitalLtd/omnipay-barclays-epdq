@@ -169,6 +169,7 @@ class EssentialPurchaseRequestTest extends TestCase
         $layout->setButtonTextColor('#553300');
         $layout->setFontType('Arial');
         $layout->setLogo('https://www.company/images/logo.png');
+        $layout->setPaymentMethodListType('2');
 
         $this->request->setPageLayout($layout);
 
@@ -185,6 +186,7 @@ class EssentialPurchaseRequestTest extends TestCase
         $this->assertSame("#553300", $data['BUTTONTXTCOLOR']);
         $this->assertSame("Arial", $data['FONTTYPE']);
         $this->assertSame("https://www.company/images/logo.png", $data['LOGO']);
+        $this->assertSame("2", $data['PMLISTTYPE']);
     }
 
     public function testDelivery()
